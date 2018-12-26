@@ -14,7 +14,7 @@ The component accepts the props defined bellow in the table.
 | ---------- | -------------------------- | -------- | --------- | --------------------------------------------------------------- |
 | id         | string                     | no       | undefined | The id of the field                                             |
 | checked    | boolean                    | no       | false     | If true, the checkbox is selected                               |
-| children   | any                        | yes      | -         | The component displayed on the right of the checkobx            |
+| children   | any                        | yes      | -         | The component displayed on the right of the checkbox            |
 | helperText | string                     | no       | undefined | The helper text of the field                                    |
 | label      | string                     | no       | undefined | The label of the field                                          |
 | onChange   | (checked: boolean) => void | yes      | -         | The callback function called when the checkbox value is changed |
