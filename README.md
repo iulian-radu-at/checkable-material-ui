@@ -85,3 +85,7 @@ export default App;
 ### 1.1.1
 
 - updated react and material-ui
+
+### 1.2.0
+
+- updated packages
