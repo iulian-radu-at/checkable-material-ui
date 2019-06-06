@@ -11,7 +11,7 @@ The component accepts the props defined bellow in the table.
 ### Props accepted by CheckableMaterialUi
 
 | Name       | Type                       | Required | Default   | Description                                                     |
-| ---------- | -------------------------- | -------- | --------- | --------------------------------------------------------------- |
+|------------|----------------------------|----------|-----------|-----------------------------------------------------------------|
 | id         | string                     | no       | undefined | The id of the field                                             |
 | checked    | boolean                    | no       | false     | If true, the checkbox is selected                               |
 | children   | any                        | yes      | -         | The component displayed on the right of the checkbox            |
@@ -25,11 +25,12 @@ The component accepts the props defined bellow in the table.
 ## Versions
 
 | CheckableMaterialUi _uses_ | Material-ui | React  |
-| -------------------------: | :---------: | :----: |
+|---------------------------:|:-----------:|:------:|
 |                      1.0.x |    3.2.0    | 16.5.2 |
 |                      1.1.x |    3.6.0    | 16.6.3 |
 |                      1.2.x |    3.9.2    | 16.8.1 |
 |                      1.3.x |    3.9.3    | 16.8.6 |
+|                      2.0.x |    4.0.2    | 16.8.6 |
 
 ### About versioning schema used for CheckableMaterialUi
 
@@ -92,5 +93,9 @@ export default App;
 - updated packages
 
 ### 1.3.0
+
+- updated packages
+
+### 2.0.0
 
 - updated packages
