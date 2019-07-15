@@ -4,6 +4,10 @@ A material-ui component which looks like a TEXTFIELD grouping together a checkbo
 
 ---
 
+## Demo
+
+You can access the storybook for this component [here](https://iulian-radu-at.github.io/checkable-material-ui/).
+
 ## Props
 
 The component accepts the props defined bellow in the table.
@@ -87,20 +91,25 @@ export default App;
 
 ### 1.1.1
 
-- updated react and material-ui
+- Updated react and material-ui
 
 ### 1.2.0
 
-- updated packages
+- Updated packages
 
 ### 1.3.0
 
-- updated packages
+- Updated packages
 
 ### 2.0.0
 
-- updated packages
+- Updated packages
 
 ### 2.1.0
 
-- updated packages
+- Updated packages
+
+### 2.1.1
+
+- Add a story book for this component
+- Updated packages
