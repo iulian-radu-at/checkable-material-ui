@@ -1,17 +1,15 @@
-import * as React from "react";
+import * as React from 'react';
+import Checkbox from '@material-ui/core/Checkbox/Checkbox';
+import FormHelperText from '@material-ui/core/FormHelperText/FormHelperText';
+import InputLabel from '@material-ui/core/InputLabel/InputLabel';
 
-import Checkbox from "@material-ui/core/Checkbox/Checkbox";
-import FormHelperText from "@material-ui/core/FormHelperText/FormHelperText";
-import InputLabel from "@material-ui/core/InputLabel/InputLabel";
-import { Dictionary, isEmpty } from "lodash";
-
-const styles: Dictionary<React.CSSProperties> = {
+const styles: { [key: string]: React.CSSProperties } = {
   checkbox: {
-    padding: "0 5px 0 0"
+    padding: '0 5px 0 0'
   },
   container: {
-    alignItems: "center",
-    display: "flex"
+    alignItems: 'center',
+    display: 'flex'
   },
   itemLeft: {
     flexGrow: 0
@@ -38,7 +36,7 @@ class CheckableMaterialUi extends React.Component<CheckableMaterialUiProps> {
   private renderLabel() {
     const { label } = this.props;
 
-    if (isEmpty(label)) {
+    if (this.isEmpty(label)) {
       return null;
     }
 
@@ -59,17 +57,17 @@ class CheckableMaterialUi extends React.Component<CheckableMaterialUiProps> {
   private renderHelperText() {
     const { helperText } = this.props;
 
-    if (isEmpty(helperText)) {
+    if (this.isEmpty(helperText)) {
       return null;
     }
 
     return <FormHelperText>{helperText}</FormHelperText>;
   }
 
-  private handleCheckboxClick = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    checked: boolean
-  ) => this.props.onChange(checked);
+  private isEmpty = (str?: string): boolean => str === undefined || str.length === 0;
+
+  private handleCheckboxClick = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) =>
+    this.props.onChange(checked);
 }
 
 interface CheckableMaterialUiProps {

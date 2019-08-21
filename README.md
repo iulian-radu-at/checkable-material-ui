@@ -36,6 +36,7 @@ The component accepts the props defined bellow in the table.
 |                      1.3.x |    3.9.3    | 16.8.6 |
 |                      2.0.x |    4.0.2    | 16.8.6 |
 |                      2.1.x |    4.2.0    | 16.8.6 |
+|                      2.2.x |    4.3.2    | 16.9.0 |
 
 ### About versioning schema used for CheckableMaterialUi
 
@@ -112,4 +113,9 @@ export default App;
 ### 2.1.1
 
 - Add a story book for this component
+- Updated packages
+
+### 2.2.0
+
+- Removed lodash
 - Updated packages
