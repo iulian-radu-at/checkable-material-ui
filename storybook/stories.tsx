@@ -10,6 +10,7 @@ const showSelectedValue = (id: string) => (checked: boolean) =>
   (document.getElementById(id).textContent = checked ? 'selected' : 'not selected');
 
 storiesOf('CheckableMaterialUi', module)
+  .addParameters({ options: { showPanel: false } })
   .add('with a text', () => (
     <div>
       <CheckableMaterialUi onChange={showSelectedValue('cmui1')}>
