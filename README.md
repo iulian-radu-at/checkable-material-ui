@@ -15,7 +15,7 @@ The component accepts the props defined bellow in the table.
 ### Props accepted by CheckableMaterialUi
 
 | Name       | Type                       | Required | Default   | Description                                                     |
-|------------|----------------------------|----------|-----------|-----------------------------------------------------------------|
+| ---------- | -------------------------- | -------- | --------- | --------------------------------------------------------------- |
 | id         | string                     | no       | undefined | The id of the field                                             |
 | checked    | boolean                    | no       | false     | If true, the checkbox is selected                               |
 | children   | any                        | yes      | -         | The component displayed on the right of the checkbox            |
@@ -29,7 +29,7 @@ The component accepts the props defined bellow in the table.
 ## Versions
 
 | CheckableMaterialUi _uses_ | Material-ui | React  |
-|---------------------------:|:-----------:|:------:|
+| -------------------------: | :---------: | :----: |
 |                      1.0.x |    3.2.0    | 16.5.2 |
 |                      1.1.x |    3.6.0    | 16.6.3 |
 |                      1.2.x |    3.9.2    | 16.8.1 |
@@ -66,7 +66,11 @@ class App extends React.Component {
           label="Colors"
           onChange={this.handleRequireColors}
         >
-          <ColorsSelect label="" options={["red", "green", "blue"]} onChange={this.handleChangeColors} />
+          <ColorsSelect
+            label=""
+            options={["red", "green", "blue"]}
+            onChange={this.handleChangeColors}
+          />
         </CheckableMaterialUi>
       </div>
     );
@@ -129,3 +133,8 @@ export default App;
 ### 2.4.0
 
 - Updated packages
+
+### 2.4.1
+
+- Updated packages
+- Moved from npm to yarn
