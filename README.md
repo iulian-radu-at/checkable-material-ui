@@ -1,4 +1,4 @@
-# checkable-material-ui
+# checkable-material-ui ![Weekly downloads](https://img.shields.io/npm/dw/checkable-material-ui "Weekly downloads")
 
 A material-ui component which looks like a TEXTFIELD grouping together a checkbox and a provided component
 
