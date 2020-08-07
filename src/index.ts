@@ -1,1 +1,1 @@
-export * from './CheckableMaterialUi';
+export { default } from "./CheckableMaterialUi";
