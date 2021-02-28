@@ -1,4 +1,4 @@
-# checkable-material-ui ![Weekly downloads](https://img.shields.io/npm/dw/checkable-material-ui "Weekly downloads")
+# checkable-material-ui ![Weekly downloads](https://img.shields.io/npm/dw/checkable-material-ui 'Weekly downloads')
 
 A material-ui component which looks like a TEXTFIELD grouping together a checkbox and a provided component
 
@@ -28,19 +28,20 @@ The component accepts the props defined bellow in the table.
 
 ## Versions
 
-| CheckableMaterialUi _uses_ | Material-ui | React  |
-| -------------------------: | :---------: | :----: |
-|                      1.0.x |    3.2.0    | 16.5.2 |
-|                      1.1.x |    3.6.0    | 16.6.3 |
-|                      1.2.x |    3.9.2    | 16.8.1 |
-|                      1.3.x |    3.9.3    | 16.8.6 |
-|                      2.0.x |    4.0.2    | 16.8.6 |
-|                      2.1.x |    4.2.0    | 16.8.6 |
-|                      2.2.x |    4.3.2    | 16.9.0 |
-|                      2.3.x |    4.6.1    | 16.9.0 |
-|                      2.4.x |    4.9.0    | 16.9.0 |
-|                      2.5.x |   4.10.2    | 16.9.0 |
-|                      2.6.x |   4.11.0    | 16.9.0 |
+| CheckableMaterialUi _uses_ | Material-ui |      React       |
+| -------------------------: | :---------: | :--------------: |
+|                      1.0.x |    3.2.0    |      16.5.2      |
+|                      1.1.x |    3.6.0    |      16.6.3      |
+|                      1.2.x |    3.9.2    |      16.8.1      |
+|                      1.3.x |    3.9.3    |      16.8.6      |
+|                      2.0.x |    4.0.2    |      16.8.6      |
+|                      2.1.x |    4.2.0    |      16.8.6      |
+|                      2.2.x |    4.3.2    |      16.9.0      |
+|                      2.3.x |    4.6.1    |      16.9.0      |
+|                      2.4.x |    4.9.0    |      16.9.0      |
+|                      2.5.x |   4.10.2    |      16.9.0      |
+|                      2.6.x |   4.11.0    |      16.9.0      |
+|                      2.7.x |   4.11.3    | 16.9.0 or 17.0.0 |
 
 ### About versioning schema used for CheckableMaterialUi
 
@@ -55,9 +56,9 @@ The component accepts the props defined bellow in the table.
 The base component which allows to create read-only or creatable select components for selecting only one or more values:
 
 ```js
-import * as React from "react";
-import CheckableMaterialUi from "checkable-material-ui";
-import { ColorsSelect } from "react-select-material-ui";
+import * as React from 'react';
+import CheckableMaterialUi from 'checkable-material-ui';
+import { ColorsSelect } from 'react-select-material-ui';
 
 class App extends React.Component {
   render() {
@@ -68,11 +69,7 @@ class App extends React.Component {
           label="Colors"
           onChange={this.handleRequireColors}
         >
-          <ColorsSelect
-            label=""
-            options={["red", "green", "blue"]}
-            onChange={this.handleChangeColors}
-          />
+          <ColorsSelect label="" options={['red', 'green', 'blue']} onChange={this.handleChangeColors} />
         </CheckableMaterialUi>
       </div>
     );
@@ -152,3 +149,7 @@ export default App;
 ### 2.6.1
 
 - Fixed crash produced by "export \* from"
+
+### 2.7.0
+
+- Accepting React 17 as peerDependencies
