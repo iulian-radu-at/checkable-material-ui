@@ -43,6 +43,7 @@ The component accepts the props defined bellow in the table.
 |                      2.6.x |   4.11.0    |      16.9.0      |
 |                      2.7.x |   4.11.3    | 16.9.0 or 17.0.0 |
 |                      2.8.x |   4.12.3    | 16.9.0 or 17.0.0 |
+|                      3.0.x |    5.5.1    |    >= 17.0.0     |
 
 ### About versioning schema used for CheckableMaterialUi
 
@@ -70,7 +71,11 @@ class App extends React.Component {
           label="Colors"
           onChange={this.handleRequireColors}
         >
-          <ColorsSelect label="" options={['red', 'green', 'blue']} onChange={this.handleChangeColors} />
+          <ColorsSelect
+            label=""
+            options={['red', 'green', 'blue']}
+            onChange={this.handleChangeColors}
+          />
         </CheckableMaterialUi>
       </div>
     );
@@ -162,3 +167,8 @@ export default App;
 ### 2.8.0
 
 - Updated packages
+
+### 3.0.0
+
+- Migrated to material-ui 5
+- Supports minimum React 17

@@ -1,22 +1,20 @@
 import * as React from 'react';
-import Checkbox from '@material-ui/core/Checkbox/Checkbox';
-import FormHelperText from '@material-ui/core/FormHelperText/FormHelperText';
-import InputLabel from '@material-ui/core/InputLabel/InputLabel';
+import { Checkbox, FormHelperText, InputLabel } from '@mui/material';
 
 const styles: { [key: string]: React.CSSProperties } = {
   checkbox: {
-    padding: '0 5px 0 0'
+    padding: '0 5px 0 0',
   },
   container: {
     alignItems: 'center',
-    display: 'flex'
+    display: 'flex',
   },
   itemLeft: {
-    flexGrow: 0
+    flexGrow: 0,
   },
   itemRight: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 };
 
 class CheckableMaterialUi extends React.Component<CheckableMaterialUiProps> {
@@ -64,10 +62,13 @@ class CheckableMaterialUi extends React.Component<CheckableMaterialUiProps> {
     return <FormHelperText>{helperText}</FormHelperText>;
   }
 
-  private isEmpty = (str?: string): boolean => str === undefined || str.length === 0;
+  private isEmpty = (str?: string): boolean =>
+    str === undefined || str.length === 0;
 
-  private handleCheckboxClick = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) =>
-    this.props.onChange(checked);
+  private handleCheckboxClick = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    checked: boolean
+  ) => this.props.onChange(checked);
 }
 
 interface CheckableMaterialUiProps {
