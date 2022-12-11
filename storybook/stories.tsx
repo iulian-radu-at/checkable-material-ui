@@ -1,35 +1,46 @@
 import CheckableMaterialUi from '../src/CheckableMaterialUi';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { ComponentMeta, ComponentStory, storiesOf } from '@storybook/react';
 
 const style: React.CSSProperties = {
-  height: 20
+  height: 20,
 };
 
 const showSelectedValue = (id: string) => (checked: boolean) =>
-  (document.getElementById(id).textContent = checked ? 'selected' : 'not selected');
+  (document.getElementById(id)!.textContent = checked
+    ? 'selected'
+    : 'not selected');
 
-storiesOf('CheckableMaterialUi', module)
-  .addParameters({ options: { showPanel: false } })
-  .add('with a text', () => (
-    <div>
-      <CheckableMaterialUi onChange={showSelectedValue('cmui1')}>
-        <strong>Bold</strong> the text
-      </CheckableMaterialUi>
-      <div style={style} />
-      Selected value: <span id="cmui1" />
-    </div>
-  ))
-  .add('with label', () => (
-    <div>
-      <CheckableMaterialUi label="Options for files" onChange={showSelectedValue('cmui2')}>
-        Show hidden files
-      </CheckableMaterialUi>
-      <div style={style} />
-      Selected value: <span id="cmui2" />
-    </div>
-  ))
-  .add('with helper text', () => (
+export default {
+  title: 'CheckableMaterialUi',
+  component: CheckableMaterialUi,
+} as ComponentMeta<typeof CheckableMaterialUi>;
+
+export const WithAText: ComponentStory<typeof CheckableMaterialUi> = () => (
+  <div>
+    <CheckableMaterialUi onChange={showSelectedValue('cmui1')}>
+      <strong>Bold</strong> the text
+    </CheckableMaterialUi>
+    <div style={style} />
+    Selected value: <span id="cmui1" />
+  </div>
+);
+
+export const WithALabel: ComponentStory<typeof CheckableMaterialUi> = () => (
+  <div>
+    <CheckableMaterialUi
+      label="Options for files"
+      onChange={showSelectedValue('cmui2')}
+    >
+      Show hidden files
+    </CheckableMaterialUi>
+    <div style={style} />
+    Selected value: <span id="cmui2" />
+  </div>
+);
+
+export const WithHelperText: ComponentStory<typeof CheckableMaterialUi> =
+  () => (
     <div>
       <CheckableMaterialUi
         helperText="Please select it if you want to see also the hidden files"
@@ -40,8 +51,10 @@ storiesOf('CheckableMaterialUi', module)
       <div style={style} />
       Selected value: <span id="cmui3" />
     </div>
-  ))
-  .add('with a component', () => (
+  );
+
+export const WithAComponent: ComponentStory<typeof CheckableMaterialUi> =
+  () => (
     <div>
       <CheckableMaterialUi
         label="Do you want only from a specific country?"
@@ -59,4 +72,4 @@ storiesOf('CheckableMaterialUi', module)
       <div style={style} />
       Selected value: <span id="cmui4" />
     </div>
-  ));
+  );
