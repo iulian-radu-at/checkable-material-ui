@@ -178,3 +178,7 @@ export default App;
 
 - Supports minimum React 18
 - Updated packages
+
+### 4.0.1
+
+- Fixed the typedef of the component

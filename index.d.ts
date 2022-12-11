@@ -1,6 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
-export interface CheckableMaterialUiProps extends React.Props<CheckableMaterialUi> {
+export interface CheckableMaterialUiProps {
+  children: React.ReactNode;
   id?: string;
   checked?: boolean;
   helperText?: string;
@@ -11,7 +12,6 @@ export interface CheckableMaterialUiProps extends React.Props<CheckableMaterialU
 
 declare class CheckableMaterialUi extends React.Component<CheckableMaterialUiProps> {}
 
-declare module "checkable-material-ui" {
-}
+declare module 'checkable-material-ui' {}
 
 export default CheckableMaterialUi;

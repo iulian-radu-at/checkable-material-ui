@@ -19,12 +19,14 @@ const styles: { [key: string]: React.CSSProperties } = {
 
 class CheckableMaterialUi extends React.Component<CheckableMaterialUiProps> {
   public render() {
+    const { children, id, style } = this.props;
+
     return (
-      <div id={this.props.id} style={this.props.style}>
+      <div id={id} style={style}>
         {this.renderLabel()}
         <div style={styles.container}>
           <div style={styles.itemLeft}>{this.renderCheckbox()}</div>
-          <div style={styles.itemRight}>{this.props.children}</div>
+          <div style={styles.itemRight}>{children}</div>
         </div>
         {this.renderHelperText()}
       </div>
@@ -72,6 +74,7 @@ class CheckableMaterialUi extends React.Component<CheckableMaterialUiProps> {
 }
 
 interface CheckableMaterialUiProps {
+  children: React.ReactNode;
   id?: string;
   checked?: boolean;
   helperText?: string;
