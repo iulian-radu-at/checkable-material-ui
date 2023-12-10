@@ -187,3 +187,7 @@ export default App;
 ### 4.1.0
 
 - Updated packages
+
+### 4.1.1
+
+- Fixed bundled lib
